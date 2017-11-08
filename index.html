@@ -3,12 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>javascript Restaurant Tip Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div id="container">
   <h1>javascript Restaurant Tip Calculator</h1>
+	
   <div id="calculator">
+    <div class="col-md-3">
+	    <form>
+		    <div class="form-group">
+			    <label for="bill-total">how much was your bill</label>
+			    <input class="form-control  col-md-2" type="number" id="bill-total" name="bill-total">
+		    </div>
+		    <div class="form-group">
+			    <label for="serviceQuality">how was your service</label>
+			    <select class="form-control" name="service" id="serviceQuality">
+				    <option disabled selected value="0"> --choose an option-</option>
+				    <option value="0.3">30%-outstanding</option>
+				    <option value="0.2">20%-good</option>
+				    <option value="0.15">15%-it was just okay</option>
+				    <option value="0.1">10%-bad</option>
+				    <option value="0.05">5%-terrible</option>
+			
+			    </select>
+			   
+		    </div>
+		    <div class="form-group">
+			    <label for="totalPeople">how many people are sharing the bill</label>
+			    <input class="form-control  col-md-2" type="number" id="totalPeople" name="totalPeople">
+			    <br>
+		    
+		    <button class="btn btn-primary btn-sm">calculate</button>
+		    </div>
+	    </form>
+    </div>
     
   </div>
 </div>
