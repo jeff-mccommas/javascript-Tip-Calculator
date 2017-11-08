@@ -8,10 +8,11 @@
 function calculateTip() {
 	
 	//Store the data of inputs
-	var taxAmount = document.getElementById("taxAmount").value/100
+	var taxAmount = document.getElementById("taxAmount").value
 	var billAmount = document.getElementById("billAmount").value;
 	var serviceQuality = document.getElementById("serviceQuality").value;
 	var numPeople = document.getElementById("totalPeople").value;
+	var taxRate =parseFloat(taxAmount/ 100)* billAmount
 	
 	//Quick Validation
 	if(billAmount === "" || serviceQuality == 0) {
@@ -29,7 +30,7 @@ function calculateTip() {
 	}
 	
 	//Do the Math for the Tip
-	var total = (billAmount * serviceQuality) / numPeople;
+	var total = (billAmount * serviceQuality+taxRate) / numPeople;
 	total = Math.round(total * 100) / 100;
 	total = total.toFixed(2);   //make sure they always have two decimal places
 	
